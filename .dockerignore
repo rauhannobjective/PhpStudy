@@ -1,0 +1,12 @@
+vendor
+
+.env
+.env.example
+.git
+
+phpunit.xml
+README.md
+
+docker-compose.yml
+
+Makefile

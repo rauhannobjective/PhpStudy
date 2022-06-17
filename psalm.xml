@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<psalm
+    errorLevel="3"
+    resolveFromConfigFile="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+>
+    <projectFiles>
+        <directory name="config" />
+        <directory name="src" />
+        <directory name="tests" />
+        <ignoreFiles>
+            <directory name="vendor" />
+        </ignoreFiles>
+    </projectFiles>
+    <issueHandlers>
+        <UndefinedGlobalVariable>
+            <errorLevel type="suppress">
+                <referencedVariable name="$app" />
+            </errorLevel>
+        </UndefinedGlobalVariable>
+        <InvalidScope>
+            <errorLevel type="suppress">
+                <directory name="config/routes" />
+            </errorLevel>
+        </InvalidScope>
+        <UndefinedInterfaceMethod>
+            <errorLevel type="suppress">
+                <file name="config/dependencies.php" />
+                <file name="tests/test-dependencies.php" />
+                <file name="tests/bootstrap.php" />
+                <file name="index.php" />
+            </errorLevel>
+        </UndefinedInterfaceMethod>
+        <MissingClosureParamType>
+            <errorLevel type="suppress">
+                <directory name="config/routes" />
+                <file name="config/dependencies.php" />
+                <file name="config/settings.php" />
+                <file name="tests/test-dependencies.php" />
+                <file name="tests/bootstrap.php" />
+            </errorLevel>
+        </MissingClosureParamType>
+        <UnresolvableInclude>
+            <errorLevel type="suppress">
+                <file name="config/routes.php" />
+            </errorLevel>
+        </UnresolvableInclude>
+        <MissingFile>
+            <errorLevel type="suppress">
+                <file name="index.php" />
+            </errorLevel>
+        </MissingFile>
+        <UndefinedPropertyFetch>
+            <errorLevel type="suppress">
+                <directory name="src/Actions" />
+            </errorLevel>
+        </UndefinedPropertyFetch>
+    </issueHandlers>
+</psalm>

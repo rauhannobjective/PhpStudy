@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="./tests/bootstrap.php"
+         colors="true"
+>
+    <testsuites>
+        <testsuite name="u">
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+
+        <testsuite name="f">
+            <directory suffix="Test.php">./tests/Functional</directory>
+        </testsuite>
+
+        <testsuite name="i">
+            <directory suffix="Test.php">./tests/Integration</directory>
+        </testsuite>
+
+        <testsuite name="models">
+            <directory suffix="Test.php">./tests/Unit/Models</directory>
+        </testsuite>
+
+        <testsuite name="services">
+            <directory suffix="Test.php">./tests/Unit/Services</directory>
+        </testsuite>
+
+        <testsuite name="entities">
+            <directory suffix="Test.php">./tests/Unit/Entities</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
